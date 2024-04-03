@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.hero {
+    width: 100%;
+    background-color: #f9f9f9;
+   /* min-height: 100vh;*/
+    /*background-image: url(https://images.pexels.com/photos/2391/dirty-industry-stack-factory.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
+
+    background-position: bottom;
+    background-size: cover;
+}
+.hero nav {
+    color:white;
+    background-color: black;
+    width: 100%;
+    padding:0 10%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-height:5vh;
+    transition: all .6s ease;
+}
+.hero nav .logo img{
+    object-fit: contain;
+    width: 67px;
+    height: 100%;
+    /* filter: invert(100%) sepia(3%) saturate(7473%) hue-rotate(176deg) brightness(112%) contrast(95%);*/
+}
+.hero nav ul {
+    list-style-type: none;
+}
+.hero nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+    height: 100%;
+}
+.hero nav ul li a {
+    padding:15px;
+    display: inline-block;
+    height: 100%;
+    text-decoration: none;
+    color:white;
+}
+.hero nav ul li a:hover {
+    background-color: #f60000;
+}
+.hero nav ul li:first-child a {
+    background: #f60000;
+}
+.hero nav ul i.fa-user:first-of-type{
+    font-size: 130%;
+    margin-left:10px;
+    padding:10px;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    text-align: center;
+    transition: all .3s ease;
+}
+.hero nav ul i.fa-user:first-of-type:hover {
+    background-color: #f60000;
+    color:white;
+}
+.hero nav .sub-menu-wrap{
+    position: absolute;
+    top: 115%;
+    right: 10%;
+    min-width: 250px;
+    background-color: #ededed;
+    color: #000000;
+    font-weight: 300;
+    border: 2px solid black;
+    z-index: 3;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .1s ease, max-height .3s ease-in;
+    opacity: 0;
+}
+.hero nav .sub-menu-wrap:before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: inherit;
+    top:-5px;
+    transform: rotate(45deg);
+    right:15px;
+    z-index: 5;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+.hero nav .sub-menu-wrap img{
+    object-fit: cover;
+    width:80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.hero nav .sub-menu {
+    padding:15px;
+}
+.hero nav .sub-menu-wrap hr{
+    border:0;
+    margin:20px;
+    background:#a1a1a1;
+    padding:1px;
+}
+.hero nav .sub-menu-wrap.show {
+    max-height: 800px;
+    opacity:1;
+}
+.hero nav ul.show {
+    max-height:800px;
+    padding:15px 0;
+    opacity:1;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.menu-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-link a i{
+    margin:0 5px;
+    background-color:#ff0000;
+    color:white;
+    border-radius: 50%;
+    text-align: center;
+    padding:10px;
+}
+.menu-link a{
+    padding:5px 10px;
+    width: 100%;
+    display: flex;
+    gap:5px;
+    align-items: center; 
+    text-decoration: none;
+    color:black;
+    border-radius: 25px;       
+}
+.menu-link a:hover {
+    background-color:#f60000;
+}
+.menu-link span {
+    float: right;
+}
+.menu-link h4 {
+    width: 100%;
+}
+.hambargar {
+    display: none;
+}
+
+@media only screen and (max-width : 700px){
+    .hambargar {
+        display: block;
+        margin-top: 10px;
+    }
+    .hambargar .line {
+        width: 30px;
+        height:3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: all .4s ease .1s;
+    }
+   
+    .hambargar.active .line:nth-of-type(1){
+        transform: rotate(45deg) translateY(12px);
+    }
+    .hambargar.active .line:nth-of-type(2){
+        width: 0;
+        transition: all .1s ease;
+    }
+    .hambargar.active .line:nth-of-type(3){
+        transform: rotate(-45deg) translateY(-12px);
+    }
+
+    .hero nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .hero nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        position: relative;
+        max-height:0;
+        overflow: hidden;
+        display: flex;
+        transition: all .4s ease;
+        opacity:0;
+        z-index: 2;
+    }
+    .hero nav ul li {
+        margin:3px 0;
+        text-align: center;
+        width: 110px;
+    }
+    .hero nav ul li a{
+        border-radius: 20px;
+        width: 100%;
+    }
+    .hero nav ul i.fa-user:first-of-type{
+        margin-left:0;    
+    }
+    .hh {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub-menu-wrap {
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+    background: #ffffff;
+    font-family: Raleway, sans-serif;
+    color: #000;
+    padding: 0;
+    margin: 0;
+}
+
+.login {
+    margin: 50px auto;
+    padding: 50px 50px;
+    max-width: 350px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 5px 5px 20px #ff4007;
+}
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.login input[type=text],
+.login input[type=password] {
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.login input[type=text]:hover {
+  border-color: #F44336;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.login input[type=submit] {
+  border: none;
+  background: #EF5350;
+  color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
+}
+
+.login input[type=submit]:hover {
+  background: #F44336;  
+}
+
+  .login h2 {
+    margin: 20px 0 0; 
+    color: #EF5350;
+    font-size: 28px;
+  }
+
+.login p {
+  margin-bottom: 40px;
+}
+
+.links {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+.links p {
+  display: table-cell;
+  padding-top: 1px;
+}
+.links a:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+
+  .login h2,
+  .login p,
+  .login a {
+    text-align: center;    
+  }
+
+.login a {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login a:visited {
+  color: inherit;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
