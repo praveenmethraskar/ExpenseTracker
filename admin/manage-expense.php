@@ -55,9 +55,10 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
       </div>
     </div>
     <ul>
-      <li><a href="welcome.php">Dashboard</a></li>
+    <li><a href="welcome.php">Dashboard</a></li>
       <li><a href="addexpense.php">Add Expenses</a></li>
       <li><a href="manage-expense.php">View Expenses</a></li>
+      <li><a href="datewisereport.php">Date wise Expenses</a></li>
       <i class="fa-solid fa-user profileIcon"></i>
     </ul>
     <div class="sub-menu-wrap" id="profileMenu">
