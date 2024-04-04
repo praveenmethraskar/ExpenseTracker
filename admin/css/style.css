@@ -45,6 +45,9 @@
     text-decoration: none;
     color:white;
 }
+.hero nav ul li a:active {
+    background: #f60000;
+}
 .hero nav ul li a:hover {
     background-color: #f60000;
 }
